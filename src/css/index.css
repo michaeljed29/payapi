@@ -1,0 +1,117 @@
+@import url("https://unpkg.com/css.gg@2.0.0/icons/css/close.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Public Sans";
+    src: url("../assets/fonts/PublicSans-Regular.ttf");
+    font-weight: 500;
+  }
+
+  @font-face {
+    font-family: "Public Sans";
+    src: url("../assets/fonts/PublicSans-Bold.ttf");
+    font-weight: 700;
+  }
+
+  @font-face {
+    font-family: "DM Serif Display";
+    src: url("../assets/fonts/DMSerifDisplay-Regular.ttf");
+    font-weight: 700;
+  }
+}
+
+:root {
+  --toastify-color-success: #ba4270;
+  --toastify-text-color-light: #36536b;
+  --toastify-font-family: "Public Sans";
+}
+
+@layer components {
+  body {
+    @apply bg-lightGray overflow-x-hidden;
+  }
+
+  html {
+    @apply font-publicSans;
+  }
+
+  .heading-1 {
+    @apply text-blue text-[32px] text-center font-dmSerif font-normal leading-[36px] max-w-[546px]
+    sm:text-[48px] sm:leading-[56px]
+    md:text-[72px] md:leading-[72px] md:text-left;
+  }
+
+  .heading-2 {
+    @apply text-blue text-[32px] sm:text-[48px] md:text-[56px] font-dmSerif font-normal leading-[36px] sm:leading-[56px];
+  }
+
+  .heading-3 {
+    @apply text-blue text-[32px] sm:text-[48px] font-dmSerif font-normal leading-[36px] sm:leading-[56px];
+  }
+
+  .heading-4 {
+    @apply text-blue text-[24px] md:text-[32px] sm:text-[24px] sm:leading-[32px] font-dmSerif font-normal leading-[40px];
+  }
+
+  .heading-5 {
+    @apply text-blue text-[24px] font-dmSerif font-normal leading-[32px];
+  }
+
+  .body-1 {
+    @apply text-lightBlue font-[15px] leading-[28px];
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    @apply w-full border-b-[1px] border-solid border-blue/[.50] 
+    outline-none bg-transparent py-[16px] px-[20px] text-[15px] text-blue 
+    font-publicSans;
+  }
+
+  input[type="text"].error,
+  input[type="email"].error,
+  textarea.error {
+    @apply border-red/[.50];
+  }
+
+  input[type="text"]::placeholder.error,
+  textarea::placeholder.error {
+    @apply text-red/[.50];
+  }
+
+  .custom-checkbox input:checked ~ label {
+    @apply bg-darkPink transition-all ease-in-out duration-[0.2s];
+  }
+  .custom-checkbox input:checked ~ label > img {
+    @apply opacity-100 transition-all ease-in-out duration-[0.2s];
+  }
+
+  footer nav ul {
+    @apply flex flex-col sm:space-x-[40px] sm:flex-row space-x-0 space-y-[32px] sm:space-y-0 items-center sm:items-start;
+  }
+
+  .image-display {
+    background-image: url("../assets/images/people.jpeg");
+  }
+
+  .padded-img {
+    @apply px-[10px] sm:px-0;
+  }
+
+  .main-nav nav ul {
+    @apply text-light/[.70] flex-col my-[43px] md:my-[43px] space-y-[32px] md:space-y-0 md:flex-row md:space-x-[40px]  space-x-0 items-center;
+  }
+
+  .main-nav nav ul li a {
+    @apply text-light/[.70] hover:text-light md:text-blue/[.70] md:hover:text-blue text-[20px] md:text-[15px];
+  }
+
+  .main-nav.open {
+    @apply translate-x-0;
+  }
+}

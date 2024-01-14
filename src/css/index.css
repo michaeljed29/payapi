@@ -104,7 +104,7 @@
   }
 
   .main-nav nav ul {
-    @apply text-light/[.70] flex-col my-[43px] md:my-[43px] space-y-[32px] md:space-y-0 md:flex-row md:space-x-[40px]  space-x-0 items-center;
+    @apply text-light/[.70] flex-col my-[43px] md:my-[0] space-y-[32px] md:space-y-0 md:flex-row md:space-x-[40px]  space-x-0 items-center;
   }
 
   .main-nav nav ul li a {
